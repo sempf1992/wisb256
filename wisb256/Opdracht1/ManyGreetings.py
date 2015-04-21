@@ -1,5 +1,5 @@
-
 # This is the first hand in exercise.
+
 Name = raw_input('What is your name? ')
 try:
    Amount = int(raw_input("How many greetings? "))
