@@ -6,8 +6,7 @@ import time
 T1 = time.clock()
 
 #read commandline
-#try:
-if True:
+try:
     N = int(sys.argv[1])
     outfile = sys.argv[2]
     primes = []
@@ -36,8 +35,8 @@ if True:
                     j += i
             i += 1
 
-#except:
-#    print("Some input has been wrong")
+except:
+    print("Some input has been wrong")
 
 #set end time
 T2 = time.clock()
