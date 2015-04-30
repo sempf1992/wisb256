@@ -15,7 +15,7 @@ try:
     ls[1] = False
     count = 0
     sq = math.sqrt(N)
-    with open(outfile, 'r+') as f:
+    with open(outfile, 'w+') as f:
         #update everything to primes
         i = 2
         while ( i <= sq):
@@ -24,7 +24,7 @@ try:
             if ls[i] == True:
             
                 #add i to primes
-                primes.append(i)
+                #primes.append(i)
                 f.write(str(i)+ "\n")
             
                 count +=1
@@ -40,7 +40,7 @@ try:
             if ls[i] == True:
             
                 #add i to primes
-                primes.append(i)
+                #primes.append(i)
                 f.write(str(i)+ "\n")
                 
                 count +=1
