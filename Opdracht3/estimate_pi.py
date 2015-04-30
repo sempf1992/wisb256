@@ -18,20 +18,23 @@ if True:
     else:
         N = int(sys.argv[1])
         L = float(sys.argv[2])
-        if (L > 1):
-            print("AssertionError: L should be smaller than 1")
-        else:
-            i = 0
-            count = 0
-            R = random
-            if (len(sys.argv) == 4):
-                seed = int(sys.argv[3])
-                R.seed(seed)
-            while (i< N):
-                if drop_needle(L, R):
-                    count += 1
-                i+=1
+        
+        i = 0
+        count = 0
+        R = random
+        if (len(sys.argv) == 4):
+            seed = int(sys.argv[3])
+            R.seed(seed)
+        while (i< N):
+            if drop_needle(L, R):
+                count += 1
+            i+=1
             
-            print(str(count) + " hits in " + str(N) + " tries")
+        print(str(count) + " hits in " + str(N) + " tries")
+        if (L > 1.0):
+            p = (1.0* count)/N
+            pi = (2 * L)/(p-1) - (2/(p-1))*(math.sqrt(L**2 -1) + math.asin((1/L)))
+            print("Pi = " + str(pi))
+            
+        else:
             print("Pi = " + str(2 * L * N / count))
-    
