@@ -1,5 +1,5 @@
 
-def findroot(f, a, b, e):
+def findRoot(f, a, b, e):
     m = (a + b)/2
     #check if we are done
     if abs(b-a)< e:
@@ -9,12 +9,12 @@ def findroot(f, a, b, e):
     #we are not done, check to verify if there is a root in the first halve
     if (f(a) * f(m) < 0):
         #we will find a root in this interval
-        return findroot(f, a, m, e)
+        return findRoot(f, a, m, e)
     #check to verify if there is a root in the first value
     elif (f(b) * f(m) < 0):
-        return findroot(f, m, b, e)
+        return findRoot(f, m, b, e)
 
-def findroot2(f,a,b,e):
+def findRoot2(f,a,b,e):
 
     m = (a + b)/2
     #check if we are done
@@ -28,16 +28,16 @@ def findroot2(f,a,b,e):
     #we are not done, check to verify if there is a root in the first halve
     if (f(a) * f(m) < 0):
         #we will find a root in this interval
-        return findroot2(f, a, m, e)
+        return findRoot2(f, a, m, e)
     #check to verify if there is a root in the first value
     elif (f(b) * f(m) < 0):
-        return findroot2(f, m, b, e)
+        return findRoot2(f, m, b, e)
     
     #now we have yet to find a root 
-    res = findroot2(f,a, m, e)
+    res = findRoot2(f,a, m, e)
     if (res == a - 2*m):
         
-        res = findroot2(f,a,m, e)
+        res = findRoot2(f,a,m, e)
         if (res == m - 2*b):
             return a - 2*b
         else:
@@ -45,7 +45,7 @@ def findroot2(f,a,b,e):
     else:
         return res
 
-def findallroots(f,a,b,e):
+def findallRoots(f,a,b,e):
     ls = []
     if e == 0:
         return
