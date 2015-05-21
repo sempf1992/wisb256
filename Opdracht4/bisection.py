@@ -45,7 +45,7 @@ def findRoot2(f,a,b,e):
     else:
         return res
 
-def findallRoots(f,a,b,e):
+def findAllRoots(f,a,b,e):
     ls = []
     if e == 0:
         return
