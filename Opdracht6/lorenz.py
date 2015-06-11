@@ -27,8 +27,8 @@ class Lorenz():
         yt = vec[1]
         zt = vec[2]
         
-        dx = [self._sigma, self._sigma, 0]
-        dy = [self._rho - zt - yt, -1, -xt]
+        dx = [- self._sigma, self._sigma, 0]
+        dy = [self._rho - zt - yt, -1, - xt]
         dz = [yt, xt, self._beta]
         gradient = array([dx, dy, dz])
         return gradient
